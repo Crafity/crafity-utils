@@ -1,3 +1,16 @@
 #!/bin/sh
-BASEDIR=$(dirname $0)/$(dirname $(readlink $0))
+LINKDIR=$(readlink $0)
+BASEDIR=$0
+
+if [ "$BASEDIR" != "" ]
+then
+	BASEDIR=$(dirname $BASEDIR)
+fi
+
+if [ "$LINKDIR" != "" ]
+then
+	echo $LINKDIR - $BASEDIR - $0 
+	BASEDIR=$BASEDIR/$(dirname $LINKDIR)
+fi
+
 /usr/local/bin/node $BASEDIR/crafity.js $1 $2 $3 $4 $5 $6 $7 $8 $9

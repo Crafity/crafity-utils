@@ -6,14 +6,13 @@ if (!cli.hasArgs() || cli.hasArg('help', '--help', '-h')) {
 }
 
 if (cli.hasArg('version', '--version', '-v')) {
-	return console.log("crafity utils version 0.0.4");
+	return console.log("crafity utils version 0.0.5");
 }
 
 if (commands.indexOf(cli.firstArg()) > -1) {
+	require('./lib/' + cli.firstArg());
 	
-	
-	console.log("cli.getArgs()", cli.getArgs());
-	
+	//console.log("cli.getArgs()", cli.getArgs());
 	
 } else {
 	
