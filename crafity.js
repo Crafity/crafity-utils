@@ -1,5 +1,5 @@
 var cli = require('./lib/cli')
-	, commands = ['create', 'serve', 'help', 'version'];
+	, commands = ['create', 'serve', 'build', 'help', 'version'];
 
 if (!cli.hasArgs() || cli.hasArg('help', '--help', '-h')) {
 	return require('./docs/help');

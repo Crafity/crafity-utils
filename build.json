@@ -1,0 +1,13 @@
+{
+	"files": {
+		"package.json": {
+			"version": "\"version\": \"\\d\\.\\d\\.\\d"
+		},
+		"crafity.js": {
+			"version": "\\d\\.\\d\\.\\d"
+		},
+		"./man/crafity.1": {
+			"version": "\\d\\\\&\\.\\d\\\\&\\.\\d"
+		}
+	}
+}
