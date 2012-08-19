@@ -6,7 +6,7 @@ Install Crafity utils using NPM
 
 Or globally if you want to use the crafity command everywhere 
 
-    npm install crafity-utils
+    npm install -g crafity-utils
 
 On the command line run the following command
 
