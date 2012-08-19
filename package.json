@@ -1,7 +1,7 @@
 {
-	"name": "crafity-utils",
+	"name": "crafity",
 	"description": "Crafity Utils",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"author": "Bart Riemens <briemens@crafity.com>",
 	"homepage": "https://github.com/Crafity/crafity-utils#readme",
 	"keywords": [ "Crafity", "utils" ],
@@ -29,15 +29,16 @@
 			"web": "http://crafity.com/about/galina"
 		}
 	],
+	"directories": {
+		"lib": "lib",
+		"test": "test",
+		"man": "man"
+	},
 	"main": "crafity.js",
 	"bin": {
 		"crafity": "./crafity"
 	},
 	"man": "./man/crafity.1",
-	"directories": {
-		"lib": "lib",
-		"test": "test"
-	},
 	"licenses": [
 		{
 			"type": "The MIT License",

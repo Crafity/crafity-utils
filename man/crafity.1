@@ -1,46 +1,76 @@
-.\" Generated with Ronnjs 0.3.8
-.\" http://github.com/kapouer/ronnjs/
-Install Crafity utils using NPM
-.
-.IP "" 4
-.
+'\" t
+.\"     Title: crafity
+.\"    Author: [see the "Authors" section]
+.\"      Date: 19-08-2012
+.\"    Manual: Crafity Manual
+.\"    Source: Crafity
+.\"  Language: English
+.\"
+.TH "CRAFITY" "1" "August 19, 2012" "Crafity 0\&.0\&.4" "Crafity Manual"
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+crafity \- Crafity command line utility for creating and managing projects
+.SH SYNOPSIS
+.sp
 .nf
-npm install crafity\-utils
-.
+\fIcrafity\fR [\-\-version] <command> [<args>]
 .fi
-.
-.IP "" 0
-.
-.P
-Or globally if you want to use the crafity command everywhere 
-.
-.IP "" 4
-.
-.nf
-npm install crafity\-utils
-.
-.fi
-.
-.IP "" 0
-.
-.P
-On the command line run the following command
-.
-.IP "" 4
-.
-.nf
-crafity
-.
-.fi
-.
-.IP "" 0
-.
+.SH "DESCRIPTION"
+.sp
+Crafity utils has a set of commands for creating and managing projects
+.sp
+The \fI<command>\fR is a name of a Crafity command (see below)\&.
+.SH "OPTIONS"
+.PP
+\-\-version
+.RS 4
+Prints the Crafity utils version\&.
+.RE
+.PP
+\-\-help
+.RS 4
+Prints the synopsis and a list of the most commonly used commands\&.
+.SH "HIGH-LEVEL COMMANDS (PORCELAIN)"
+.sp
+The next section contains all the available commands\&.
+.SS "Main commands"
+.PP
+\fBcreate\fR
+.RS 4
+Create a new project\&.
+.RE
+.PP
+\fBserve\fR
+.RS 4
+Serve current directory using HTTP\&.
+.RE
+.PP
+\fbhelp\fR
+.RS 4
+Help information\&.
+.RE
+.PP
+\fBversion\fR
+.RS 4
+Show the version number\&.
+.RE
 .SH "The MIT License"
+.pp
 Copyright (c) 2010\-2012 Bart Riemens \fIbriemens@crafity\.com\fR
+.br
 Copyright (c) 2010\-2012 Galina Slavova \fIgalina@crafity\.com\fR
+.br
 Copyright (c) 2010\-2012 Crafity \fIinfo@crafity\.com\fR
-.
-.P
+.PP
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 \'Software\'), to deal in the Software without restriction, including
@@ -48,12 +78,10 @@ without limitation the rights to use, copy, modify, merge, publish,
 distribute, sublicense, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to
 the following conditions:
-.
-.P
+.PP
 The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software\.
-.
-.P
+.PP
 THE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\.

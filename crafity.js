@@ -6,7 +6,7 @@ if (!cli.hasArgs() || cli.hasArg('help', '--help', '-h')) {
 }
 
 if (cli.hasArg('version', '--version', '-v')) {
-	return console.log("crafity utils version 0.0.1");
+	return console.log("crafity utils version 0.0.4");
 }
 
 if (commands.indexOf(cli.firstArg()) > -1) {
