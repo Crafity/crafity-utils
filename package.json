@@ -53,7 +53,8 @@
 		"url": "https://github.com/Crafity/crafity-utils.git"
 	},
 	"dependencies": {
-		"ansi": "0.1.2"
+		"ansi": "0.1.2",
+		"crafity-filesystem": "*"
 	},
 	"engines": {
 		"node": "*"
