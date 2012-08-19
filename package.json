@@ -54,7 +54,8 @@
 	},
 	"dependencies": {
 		"ansi": "0.1.2",
-		"crafity-filesystem": "*"
+		"crafity-filesystem": "*",
+		"crafity-process": "*"
 	},
 	"engines": {
 		"node": "*"
