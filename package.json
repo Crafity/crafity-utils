@@ -1,7 +1,7 @@
 {
 	"name": "crafity-utils",
 	"description": "Crafity Utils",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Bart Riemens <briemens@crafity.com>",
 	"homepage": "https://github.com/Crafity/crafity-utils#readme",
 	"keywords": [ "Crafity", "utils" ],
@@ -33,9 +33,7 @@
 	"bin": {
 		"crafity": "./crafity"
 	},
-	"man": [
-		"./man/crafity.1"
-	],
+	"man": "./man/crafity.1",
 	"directories": {
 		"lib": "lib",
 		"test": "test"
