@@ -9,7 +9,6 @@ fi
 
 if [ "$LINKDIR" != "" ]
 then
-	echo $LINKDIR - $BASEDIR - $0 
 	BASEDIR=$BASEDIR/$(dirname $LINKDIR)
 fi
 
