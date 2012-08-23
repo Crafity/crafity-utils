@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/Crafity/crafity-utils.png)](http://travis-ci.org/Crafity/crafity-utils)
 #Crafity Utils
 
 Install Crafity utils using NPM
