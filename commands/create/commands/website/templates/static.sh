@@ -23,9 +23,17 @@ else
 fi
 
 #========================================================
+#Create the empty dirs
+#========================================================
+mkdir $targetdir/output
+mkdir $targetdir/src/img
+
+#========================================================
 #Copy all the files
 #========================================================
-cp -R static/* $targetdir
+cd static
+cp -Ra * $targetdir
+cd ..
 
 #========================================================
 #Replace the placeholders
