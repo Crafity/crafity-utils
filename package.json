@@ -1,7 +1,7 @@
 {
 	"name": "crafity",
 	"description": "Crafity Utils",
-	"version": "0.0.5",
+	"version": "0.0.7",
 	"author": "Bart Riemens <briemens@crafity.com>",
 	"homepage": "https://github.com/Crafity/crafity-utils#readme",
 	"keywords": [ "Crafity", "utils" ],
@@ -53,9 +53,7 @@
 		"url": "https://github.com/Crafity/crafity-utils.git"
 	},
 	"dependencies": {
-		"ansi": "0.1.2",
-		"crafity-filesystem": "*",
-		"crafity-core": "*"
+		"ansi": "0.1.2"
 	},
 	"engines": {
 		"node": "*"
