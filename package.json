@@ -1,7 +1,7 @@
 {
 	"name": "crafity",
 	"description": "Crafity Utils",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"author": "Bart Riemens <briemens@crafity.com>",
 	"homepage": "https://github.com/Crafity/crafity-utils#readme",
 	"keywords": [ "Crafity", "utils" ],
