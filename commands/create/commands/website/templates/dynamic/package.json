@@ -1,0 +1,12 @@
+{
+	"name": "$projectname",
+	"description": "",
+	"version": "0.0.1",
+	"author": {
+		"name": "$authorname",
+		"email": "$authoremail"
+	},
+	"dependencies": {
+		"crafity-webserver": "*"
+	}
+}

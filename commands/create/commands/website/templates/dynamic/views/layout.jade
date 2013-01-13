@@ -1,0 +1,11 @@
+!!!5
+html
+	head
+		title $projectname
+		link(href="/styles/theme.css", rel="stylesheet", type="text/css")
+	body
+		!=body
+	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js")
+	script
+		window.jQuery || document.write('<script src="/scripts/jquery-1.8.3.min.js"><\\/script>');
+	script(defer, src="/scripts/main.js")

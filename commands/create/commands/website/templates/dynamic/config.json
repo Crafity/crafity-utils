@@ -1,0 +1,46 @@
+{
+	"environment": "development",
+	"shared": {},
+	"development": {
+		"webserver": {
+			"ip": "0.0.0.0",
+			"port": 8123,
+			"autolisten": true,
+			"dumpExceptions": true,
+			"showStack": true,
+			"views": {
+				"engine": "jade",
+				"path": "/views",
+				"layouts": {
+					"default": "layout"
+				},
+				"cached": false
+			},
+			"stylus": {
+				"debug": true,
+				"force": true,
+				"compress": false,
+				"src": "/",
+				"dest": "/public"
+			},
+			"controllers": {
+				"path": "/controllers",
+				"order": [ "home" ]
+			},
+			"resources": {
+				"path": "/resources",
+				"defaultLanguage": "en"
+			},
+			"fileserver": {
+				"directories": [
+					{
+						"url": "/",
+						"path": "/public",
+						"include": "*.*",
+						"cached": false
+					}
+				]
+			}
+		}
+	}
+}

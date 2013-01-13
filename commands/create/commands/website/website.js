@@ -44,7 +44,19 @@ module.exports = function CreateWebsiteCommand(args, commands) {
       // Generate a dynamic website structure
       args.remove('-d', '--dynamic');
 
-      return console.log("Executing Create new DYNAMIC Website", args.getArgs());
+      var projectName = args.last()
+        , targetDir = path.join(process.cwd(), projectName);
+
+      //console.log("process.cwd()", process);
+      childProcess.exec(templatePath + 'dynamic.sh ' + projectName + " " + targetDir, { cwd: templatePath }, function (error, stdout, stderr) {
+        if (error) {
+          console.log("ERROR:", stderr.replace(/\n$/, ''));
+        } else {
+          var output = stdout.replace(/\n$/, '');
+          output && console.log(output);
+          //console.log("error, stdout, stderr", error, stdout, stderr);
+        }
+      });
 
     } else {
       throw new Error("Invalid website type")
