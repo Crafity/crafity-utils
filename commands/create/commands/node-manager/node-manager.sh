@@ -3,7 +3,7 @@
 #========================================================
 #Check the parameters
 #========================================================
-export help="Usage: static.sh <projectName> <targetDir>"
+export help="Usage: proxy.sh <projectName> <targetDir>"
 if [ "$1" == "" ] || [ "$2" == "" ]; then
 	echo $help
 	exit 99
@@ -23,26 +23,25 @@ else
 fi
 
 #========================================================
+#Create the empty dirs
+#========================================================
+#mkdir $targetdir/output
+#mkdir $targetdir/src/img
+
+#========================================================
 #Copy all the files
 #========================================================
-cd static
+cd template
 cp -Ra * $targetdir
 cd ..
 
 #========================================================
-#Create the empty dirs
-#========================================================
-mkdir $targetdir/output
-#mkdir $targetdir/src/img
-
-#========================================================
 #Replace the placeholders
 #========================================================
-sed 's/$projectname/'$projectname'/' $targetdir/src/index.jade > $targetdir/src/_index.jade
-mv $targetdir/src/_index.jade $targetdir/src/index.jade
+#sed 's/$projectname/'$projectname'/' $targetdir/config.json > $targetdir/_config.json
+#mv $targetdir/_config.json $targetdir/config.json
+
 
 #========================================================
 #Trigger first build
 #========================================================
-cd $targetdir
-./build.sh

@@ -1,0 +1,101 @@
+{
+	"environment": "development",
+	"shared": {},
+	"development": {
+		"nodeManager": {
+			"restartOnFail": true,
+			"numberOfRetries": 3,
+			"fatalStartupTimeout": 5000,
+			"webserver": {
+				"ip": "127.0.0.1",
+				"port": 7778,
+				"dumpExceptions": true,
+				"showStack": true,
+				"autolisten": true
+			},
+			"processes": [
+				{
+					"name": "Example",
+					"cwd": "~/Example/",
+					"cmd": "/usr/local/bin/node",
+					"git": {
+						"path": ".."
+					},
+					"args": ["example.js"],
+					"autostart": true,
+					"autorestart": {
+						"enabled": true,
+						"paths": [ "!/Example/" ],
+						"include": "*.js|*.json"
+					}
+				}
+			]
+		},
+		"logging": {
+			"keep": false,
+			"appenders": [
+				{
+					"type": "console",
+					"name": "Crafity Node Manager"
+				},
+				{
+					"filename": "manager.log",
+					"type": "file",
+					"name": "Crafity Node Manager",
+					"maxLogSize": 20971520,
+					"backups": 10,
+					"console": true
+				}
+			]
+		}
+
+	},
+	"production": {
+		"nodeManager": {
+			"restartOnFail": true,
+			"numberOfRetries": 3,
+			"fatalStartupTimeout": 5000,
+			"webserver": {
+				"ip": "127.0.0.1",
+				"port": 7778,
+				"dumpExceptions": true,
+				"showStack": true,
+				"autolisten": true
+			},
+			"processes": [
+				{
+					"name": "Example",
+					"cwd": "~/Example/",
+					"cmd": "/usr/local/bin/node",
+					"git": {
+						"path": ".."
+					},
+					"args": ["example.js"],
+					"autostart": true,
+					"autorestart": {
+						"enabled": true,
+						"paths": [ "!/Example/" ],
+						"include": "*.js|*.json"
+					}
+				}
+			]
+		},
+		"logging": {
+			"keep": false,
+			"appenders": [
+				{
+					"type": "console",
+					"name": "Crafity Node Manager"
+				},
+				{
+					"filename": "manager.log",
+					"type": "file",
+					"name": "Crafity Node Manager",
+					"maxLogSize": 20971520,
+					"backups": 10,
+					"console": true
+				}
+			]
+		}
+	}
+}

@@ -1,9 +1,26 @@
 !!!5
-html
+//if lt IE 7
+	html.no-js.not-ready.no-touch.ie6(lang="en")
+//if IE 7
+	html.no-js.not-ready.no-touch.ie7(lang="en")
+//if IE 8
+	html.no-js.not-ready.no-touch.ie8(lang="en")
+// [if gt IE 8] <!
+html.no-js.not-ready.no-touch(lang="en")
+	!= '<!-- <![endif]-->'
+	//- <![endif]
 	head
+		meta(charset='utf-8')
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		meta(name="author", content="$projectname")
+		meta(name="powered by", content="$projectname")
+		meta(name="description", content="$projectname")
+		meta(name="viewport", content="width=device-width,initial-scale=1,minimum-scale=1.0, maximum-scale=1.0")
 		title $projectname
+		script(src="js/lib/modernizr-latest.js?v=999")
 		link(href="styles/style.css?v=999", rel="stylesheet", type="text/css")
 	body
 		h1 $projectname
-		script(src="js/lib/jquery-1.8.3.min.js")
-		script(src="js/main.js?v=999")
+		div.delete.icon
+		div.document.icon
+		script(src="js/website.min.js?v=999")

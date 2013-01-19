@@ -1,0 +1,72 @@
+{
+	"environment": "development",
+	"shared": {  },
+	"development": {
+		"proxyserver": {
+			"ip": "0.0.0.0",
+			"port": 80,
+			"dumpExceptions": true,
+			"showStack": true,
+			"proxy": {
+				"dev1.com": {
+					"ip": "127.0.0.1",
+					"port": 9000
+				},
+				"dev2.com": {
+					"ip": "127.0.0.1",
+					"port": 9100
+				},
+				"dev3.com": {
+					"ip": "127.0.0.1",
+					"port": 9200
+				}
+			},
+			"autolisten": true
+		},
+		"logging": {
+			"keep": false,
+			"appenders": [
+				{
+					"type": "console",
+					"name": "$projectname"
+				},
+				{
+					"filename": "proxy.log",
+					"type": "file",
+					"name": "$projectname",
+					"maxLogSize": 20971520,
+					"backups": 10,
+					"console": true
+				}
+			]
+		}
+	},
+	"production": {
+		"proxyserver": {
+			"ip": "0.0.0.0",
+			"port": 80,
+			"dumpExceptions": false,
+			"showStack": false,
+			"proxy": {
+			},
+			"autolisten": true
+		},
+		"logging": {
+			"keep": false,
+			"appenders": [
+				{
+					"type": "console",
+					"name": "$projectname"
+				},
+				{
+					"filename": "proxy.log",
+					"type": "file",
+					"name": "$projectname",
+					"maxLogSize": 20971520,
+					"backups": 10,
+					"console": true
+				}
+			]
+		}
+	}
+}

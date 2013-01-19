@@ -4,7 +4,7 @@
 	"development": {
 		"webserver": {
 			"ip": "0.0.0.0",
-			"port": 8123,
+			"port": 9000,
 			"autolisten": true,
 			"dumpExceptions": true,
 			"showStack": true,
