@@ -1,2 +1,2 @@
 #!/bin/sh
-NODE_ENV=production nodemon main.js
+NODE_ENV=production node main.js
