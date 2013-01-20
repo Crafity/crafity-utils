@@ -5,6 +5,7 @@ module.exports = new Help({
     commands: {
       create: "Create a new project",
       serve: "Serve current directory using HTTP",
+      glue: "Create a sprite map",
       //build: "Build a project",
       //couchdb: "Commonly used CouchDB operations",
       help: {

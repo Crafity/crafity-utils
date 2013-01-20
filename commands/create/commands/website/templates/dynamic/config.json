@@ -21,7 +21,7 @@
 				"force": true,
 				"compress": false,
 				"src": "/",
-				"dest": "/public"
+				"dest": "/static"
 			},
 			"controllers": {
 				"path": "/controllers",
@@ -35,9 +35,51 @@
 				"directories": [
 					{
 						"url": "/",
-						"path": "/public",
+						"path": "/static",
 						"include": "*.*",
 						"cached": false
+					}
+				]
+			}
+		}
+	},
+	"production": {
+		"webserver": {
+			"ip": "0.0.0.0",
+			"port": 9000,
+			"autolisten": true,
+			"dumpExceptions": false,
+			"showStack": false,
+			"views": {
+				"engine": "jade",
+				"path": "/views",
+				"layouts": {
+					"default": "layout"
+				},
+				"cached": true
+			},
+			"stylus": {
+				"debug": false,
+				"force": false,
+				"compress": true,
+				"src": "/",
+				"dest": "/static"
+			},
+			"controllers": {
+				"path": "/controllers",
+				"order": [ "home" ]
+			},
+			"resources": {
+				"path": "/resources",
+				"defaultLanguage": "en"
+			},
+			"fileserver": {
+				"directories": [
+					{
+						"url": "/",
+						"path": "/static",
+						"include": "*.*",
+						"cached": true
 					}
 				]
 			}

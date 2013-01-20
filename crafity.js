@@ -9,7 +9,7 @@ if (!args.hasArgs() || args.isFirstArg('help', '--help', '-h')) {
 }
 
 if (args.hasArg('version', '--version', '-v')) {
-  return console.log("crafity utils version 0.0.14");
+  return console.log("crafity utils version 0.0.15");
 }
 
 if (help.commands.indexOf(args.first().toLowerCase()) === -1) {
