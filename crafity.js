@@ -12,7 +12,7 @@ function run(args) {
   }
 
   if (args.hasArg('version', '--version', '-v')) {
-    return console.log("crafity utils version 0.0.16");
+    return console.log("crafity utils version 0.0.17");
   }
 
   if (help.commands.indexOf(args.first().toLowerCase()) === -1) {
