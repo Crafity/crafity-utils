@@ -19,7 +19,7 @@ html.no-js.not-ready.no-touch(lang="en")
 		title $projectname
 		script(src="js/lib/modernizr-latest.js?v=999")
 		link(href="styles/style.css?v=999", rel="stylesheet", type="text/css")
-		link(href="styles/bootstrap.css?v=999", rel="stylesheet", type="text/css")
+		link(href="styles/bootstrap.min.css?v=999", rel="stylesheet", type="text/css")
 	body
 		.alert.alert-block.alert-error.fade.in
 			button.close(type='button', data-dismiss='alert') ?
@@ -46,58 +46,61 @@ html.no-js.not-ready.no-touch(lang="en")
 							li.contact
 								a(href="#") Contact
 		.container
-ul.breadcrumb
-	li
-		a(href='#') $projectname
-		span.divider /
-	li
-		a(href='#') Home
-		span.divider /
-	li.active Section 1
-	.tabbable
-		ul.nav.nav-tabs
-			li.active
-				a(href='#tab1', data-toggle='tab') Section 1
-			li
-				a(href='#tab2', data-toggle='tab') Section 2
-		.tab-content
-			#tab1.tab-pane.active
-				h1 $projectname
-				p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis. Donec sed odio dui.
-				p Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo.
-				p Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-				div.delete.icon
-				div.document.icon
-				table.table
-					thead
-						tr
-							th #
-							th Product
-							th Payment Taken
-							th Status
-					tbody
-						tr.success
-							td 1
-							td TB - Monthly
-							td 01/04/2012
-							td Approved
-						tr.error
-							td 2
-							td TB - Monthly
-							td 02/04/2012
-							td Declined
-						tr.warning
-							td 3
-							td TB - Monthly
-							td 03/04/2012
-							td Pending
-						tr.info
-							td 4
-							td TB - Monthly
-							td 04/04/2012
-							td Call in to confirm
-				.btn-group
-					button.btn Left
-					button.btn Middle
-					button.btn Right		
+			ul.breadcrumb
+				li
+					a(href='#') $projectname
+					span.divider /
+				li
+					a(href='#') Home
+					span.divider /
+				li.active Section 1
+				.tabbable
+					ul.nav.nav-tabs
+						li.active
+							a(href='#tab1', data-toggle='tab') Section 1
+						li
+							a(href='#tab2', data-toggle='tab') Section 2
+					.tab-content
+						#tab1.tab-pane.active
+							.hero-unit
+								h1 $projectname
+								p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis. Donec sed odio dui.
+								a.btn.btn-primary.btn-large
+									| Learn more			
+							p Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo.
+							p Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+							div.delete.icon
+							div.document.icon
+							table.table
+								thead
+									tr
+										th #
+										th Product
+										th Payment Taken
+										th Status
+								tbody
+									tr.success
+										td 1
+										td TB - Monthly
+										td 01/04/2012
+										td Approved
+									tr.error
+										td 2
+										td TB - Monthly
+										td 02/04/2012
+										td Declined
+									tr.warning
+										td 3
+										td TB - Monthly
+										td 03/04/2012
+										td Pending
+									tr.info
+										td 4
+										td TB - Monthly
+										td 04/04/2012
+										td Call in to confirm
+							.btn-group
+								button.btn Left
+								button.btn Middle
+								button.btn Right	
 	script(src="js/website.min.js?v=999")
