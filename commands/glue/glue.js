@@ -18,16 +18,17 @@ module.exports = function ServeCommand(args, commands) {
     if (!(outputPath = args.getArgValue("--output", "-o"))) {
       return help.overview();
     }
-    if (!(relPath = args.getArgValue("--relative", "-r"))) {
+    if (!(relPath = args.getArgValue("--rel", "-r"))) {
       return help.overview();
     }
     if (!(cssPath = args.getArgValue("--css", "-c"))) {
       return help.overview();
     }
-    if (!(srcPath = args.getArgValue("--source", "-s"))) {
+    if (!(srcPath = args.getArgValue("--src", "-s"))) {
       return help.overview();
     }
     var running = false;
+
     
     function glueIt() {
       if (running) { return; }

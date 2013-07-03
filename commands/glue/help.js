@@ -5,7 +5,7 @@ module.exports = new Help({
   description: "Create a sprite map",
   usage: "glue --src=<dir> --css=<dir> --rel=<dir> --output=<dir>",
   arguments: {
-    "--source=<dir>": {
+    "--src=<dir>": {
       aliases: [ "-s" ],
       required: true,
       description: "The path to source images"

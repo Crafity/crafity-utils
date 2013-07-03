@@ -1,9 +1,27 @@
 @import reset
 @import nib
 @import sprite
+@import font-face
 
 body
 	font-family: sans-serif
+	padding-top: 60px
+
+li.home a:before,
+li.about a:before,
+li.contact a:before	
+	font-family: entypo
+	font-size: 32pt
+	color: white
+	display: inline-block
+	padding-right: 5px
+	margin-bottom: -3px
+li.home a:before	
+	content: '\2302'
+li.about a:before	
+	content: '\E723'
+li.contact a:before	
+	content: '\1F4F1'	
 
 .icon
 	&.delete

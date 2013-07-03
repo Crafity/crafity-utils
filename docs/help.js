@@ -11,6 +11,7 @@ exports.commands = function () {
 	cursor
 		.reset().write("The most commonly used Crafity commands are:\n")
 		.reset().write("  ").green().write("create").reset().write("\tCreate a new project\n")
+		.reset().write("  ").green().write("store").reset().write("\tStore data\n")
 		.reset().write("  ").green().write("serve").reset().write("\t\tServe current directory using HTTP\n")
 		.reset().write("  ").green().write("build").reset().write("\t\tBuild a project\n")
 		.reset().write("  ").green().write("couchdb").reset().write("\tCommonly used CouchDB operations\n")

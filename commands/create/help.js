@@ -6,6 +6,9 @@ module.exports = new Help({
     website: {
       description: "Create a new project"
     },
+    mongodb: {
+      description: "Create a new mongodb database or collection"
+    },
     "node-manager": {
       description: "Create a new node manager"
     },
