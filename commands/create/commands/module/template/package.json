@@ -1,0 +1,47 @@
+{
+  "name": "$projectname",
+  "description": "$description",
+  "version": "0.0.1",
+  "author": "$githubname",
+  "homepage": "https://github.com/$githubname/$projectname#readme",
+  "keywords": [ "$githubname" ],
+  "maintainers": [
+    {
+      "name": "<name>",
+      "email": "<email>",
+      "web": "<web>"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "<name>",
+      "email": "<email>",
+      "web": "<web>"
+    }
+  ],
+  "main": "./main.js",
+  "directories": {},
+  "licenses": [
+    {
+      "type": "The MIT License",
+      "url": "https://github.com/$githubname/$projectname/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/$githubname/$projectname/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/$githubname/$projectname.git"
+  },
+  "dependencies": {
+    "crafity-jstest": "~0.1.0"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "scripts/npm-test.sh"
+  }
+}

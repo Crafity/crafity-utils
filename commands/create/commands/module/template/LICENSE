@@ -1,22 +1,6 @@
-#Crafity Utils
+(The MIT License)
 
-Install Crafity utils using NPM
-
-    npm install crafity
-
-Or globally if you want to use the crafity command everywhere 
-
-    npm install -g crafity
-
-On the command line run the following command
-
-    crafity
-
-##The MIT License
-
-Copyright (c) 2010-2012 Bart Riemens <briemens@crafity.com>
-Copyright (c) 2010-2012 Galina Slavova <galina@crafity.com>
-Copyright (c) 2010-2012 Crafity <info@crafity.com>
+Copyright (c) <year> <name> <email>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
