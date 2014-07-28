@@ -45,7 +45,8 @@ module.exports = function ServeCommand(args, commands) {
 
         res.writeHead(200, {
           'Content-Type': mime.lookup(url),
-          'content-encoding': 'gzip'
+          'content-encoding': 'gzip',
+          'Access-Control-Allow-Origin': '*'
         });
 
         return raw.pipe(zlib.createGzip()).pipe(res);
