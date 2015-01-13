@@ -30,6 +30,11 @@ module.exports = new Help({
       default: 10,
       description: "Throw random errors x percentage of the http posts"
     },
+    "--delay=<ms>": {
+      aliases: [ "-d" ],
+      default: 0,
+      description: "Delay between request and response"
+    },
     "--show": {
       aliases: [ "-s" ],
       default: false,
