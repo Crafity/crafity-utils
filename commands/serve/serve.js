@@ -25,7 +25,18 @@ module.exports = function ServeCommand(args, commands) {
       args.append("--gzip");
     }
 
+    if (args.hasArg('-s', '--secure') && (!args.getArgValue('-k', '--key') || !args.getArgValue('-c', '--cert'))) {
+      return help.overview();
+    }
+    if (!args.hasArg('-s', '--secure') && (args.getArgValue('-k', '--key') || args.getArgValue('-c', '--cert'))) {
+      return help.overview();
+    }
+    
     port = args.getArgValue('-p', '--port') === "true" ? 2020 : args.getArgValue('-p', '--port');
+    ip = !args.getArgValue('-i', '--ip') ? "127.0.0.1" : args.getArgValue('-i', '--ip');
+    protocol = !args.getArgValue('-s', '--secure') ? "http" : "https";
+    key = !args.getArgValue('-k', '--key') ? null : args.getArgValue('-k', '--key');
+    cert = !args.getArgValue('-c', '--cert') ? null : args.getArgValue('-c', '--cert');
     errorPercentage = args.getArgValue('-e', '--errors') === "true" ? 0 : args.getArgValue('-e', '--errors');
     delay = args.getArgValue('-d', '--delay') === "true" ? 0 : args.getArgValue('-d', '--delay');
     gzip = (args.getArgValue('-g', '--gzip') ? (args.getArgValue('-g', '--gzip')).toLowerCase() === "true" : true);
@@ -33,13 +44,13 @@ module.exports = function ServeCommand(args, commands) {
     showBody = args.getArgValue('-b', '--body');
 
     /*jslint node:true, white:true*/
-    var http = require('http')
+    var protocolClient = require(protocol)
       , fs = require('fs')
       , zlib = require('zlib')
       , mime = require('mime')
       , server;
 
-    server = http.createServer(function (req, res) {
+    function requestHandler(req, res) {
       "use strict";
 
       try {
@@ -111,11 +122,21 @@ module.exports = function ServeCommand(args, commands) {
         res.writeHead(500);
         return res.end(err.message + "\n" + err.stack);
       }
-    });
+    }
 
-    server.listen(port);
+    if (protocol === "http") {
+      server = protocolClient.createServer(requestHandler);
+    } else {
+      var options = {
+        key: fs.readFileSync(key).toString(),
+        cert: fs.readFileSync(cert).toString()
+      };
+      server = protocolClient.createServer(options, requestHandler);
+    }
 
-    console.log("Serving content on http://localhost:" + port);
+    server.listen(port, ip);
+
+    console.log("Serving content on " + protocol + "://" + ip + ":" + port);
 
     if (args.hasArg('-s', '--show')) {
       require('child_process').spawn('open', ["http://localhost:" + port]);
